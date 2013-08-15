@@ -7,6 +7,9 @@ module Rack
     # Install the Rack::CommonLogger monkeypatch
     def self.install
       Rack::CommonLogger.class_eval do
+
+        alias_method :original_log, :log
+
         def log(env, status, header, began_at)
           logger = @logger || env['rack.errors']
 
