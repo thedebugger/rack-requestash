@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "rack-requestash"
   spec.version       = Rack::Requestash::VERSION
   spec.authors       = ["R. Tyler Croy"]
-  spec.email         = ["tyler@monkeypox.org"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["rtyler.croy@lookout.com"]
+  spec.description   = "A simple gem for overwriting outputting JSON formatted access logs from Rack apps"
+  spec.summary       = "A simple gem for overwriting outputting JSON formatted access logs from Rack apps"
+  spec.homepage      = "https://github.com/lookout/rack-requestash"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
