@@ -26,7 +26,7 @@ try something like:
 
     require 'rack/requestash'
 
-    class MyServer < Sintara::Base
+    class MyServer < Sinatra::Base
       Rack::Requestash.install
 
       get '/' do
