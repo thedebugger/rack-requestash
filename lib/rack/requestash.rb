@@ -39,7 +39,8 @@ module Rack
           }
 
           if logger
-            logger.write(blob.to_json)
+            logger.write({:type => 'request',
+                          :event => blob}.to_json)
             logger.write("\n")
           end
         end
