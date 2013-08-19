@@ -3,7 +3,7 @@ require 'json'
 
 module Rack
   class Requestash
-    VERSION = "0.0.1"
+    VERSION = "0.0.2"
 
     def initialize(app, options={})
       @app = app
