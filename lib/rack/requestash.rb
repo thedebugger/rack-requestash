@@ -1,11 +1,23 @@
-require 'rack/requestash/version'
 require 'rack/commonlogger'
 require 'json'
 
 module Rack
-  module Requestash
+  class Requestash
+    VERSION = "0.0.1"
+
+    def initialize(app, options={})
+      @app = app
+
+      install if options[:disable_accesslog].nil?
+    end
+
+    def call(env)
+      # Simple pass-through, we don't need to mess with the request
+      @app.call(env)
+    end
+
     # Install the Rack::CommonLogger monkeypatch
-    def self.install
+    def install
       Rack::CommonLogger.class_eval do
 
         alias_method :original_log, :log
