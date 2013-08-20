@@ -11,4 +11,5 @@ group :test do
   gem 'debugger', :platform => :mri_19
   gem 'debugger-pry', :platform => :mri_19
   gem 'pry'
+  gem 'log4r'
 end
