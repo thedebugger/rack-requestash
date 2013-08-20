@@ -27,7 +27,7 @@ try something like:
     require 'rack/requestash'
 
     class MyServer < Sinatra::Base
-      Rack::Requestash.install
+      use Rack::Requestash::AccessLogger
 
       get '/' do
        'Yahtzee!'
