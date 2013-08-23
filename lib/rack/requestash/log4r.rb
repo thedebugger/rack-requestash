@@ -16,7 +16,7 @@ module Rack
           {
             :type => 'log',
             :event => {
-              :tracer => event.tracer,
+              :tracer => event.tracer[0 .. 10],
               :level => ::Log4r::LNAMES[event.level],
               :message => event.data
             }
