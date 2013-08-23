@@ -20,7 +20,7 @@ module Rack
               :level => ::Log4r::LNAMES[event.level],
               :message => event.data
             }
-          }.to_json
+          }.to_json + "\n"
         end
       end
     end
