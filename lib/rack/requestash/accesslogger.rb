@@ -34,6 +34,7 @@ module Rack
               :path => env['PATH_INFO'],
               :ip => env['HTTP_X_FORWARDED_FOR'] || env['REMOTE_ADDR'],
               :user => env['REMOTE_USER'],
+              :user_agent => env['HTTP_USER_AGENT'],
               :timestamp => Time.now.utc.iso8601
             }
 
