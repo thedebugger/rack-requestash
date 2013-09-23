@@ -19,21 +19,17 @@ Or install it yourself as:
 
 ## Usage
 
-Rack::Requestash will monkey-patch the `Rack::CommonLogger` class which
-provides Apache-style access logs. In order to enable in in your application,
-try something like:
+For rails, add the rack extension in the environment file to enable access logging. Do something like this in the environment.rb: 
 
+require 'rack/requestash'
+config.middleware.use Rack::Requestash::CommonJsonLogger, Rails.logger
 
-    require 'rack/requestash'
+You can pass a different logger. For more information, check `Rack::CommonLogger` class.
 
-    class MyServer < Sinatra::Base
-      use Rack::Requestash::AccessLogger
+For rack applications, add the below snippet in the config.ru file:
 
-      get '/' do
-       'Yahtzee!'
-      end
-    end
-
+require 'rack/requestash'
+use Rack::Requestash::CommonJsonLogger, logger
 
 You will then get nice, JSON formatted logs:
 
