@@ -1,6 +1,7 @@
 require 'rack/commonlogger'
 require 'json'
 
+#Deprecated. Use the CommonJsonLogger instead.
 module Rack
   module Requestash
     class AccessLogger
