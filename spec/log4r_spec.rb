@@ -39,7 +39,6 @@ describe Rack::Requestash::Log4r::Formatter do
         subject(:output) { JSON.parse(log) }
 
         it { should have_key 'type' }
-        it { should have_key 'remote_addr' }
         it 'should have "log" as the type' do
           expect(output['type']).to eql('log')
         end
