@@ -1,4 +1,3 @@
-require 'rack/requestash/accesslogger'
 require 'rack/requestash/commonjsonlogger'
 
 module Rack
